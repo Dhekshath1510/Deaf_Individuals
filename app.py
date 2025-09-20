@@ -8,7 +8,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/")
 def home():
-    return "ESP32 Speech-to-Text API is running!"
+    return "Deaf Individuals Speech-to-Text API is running on Azure!"
 
 @app.route("/upload", methods=["POST"])
 def upload_wav():
@@ -35,7 +35,6 @@ def upload_wav():
 
     os.remove(filepath)
     return jsonify({"text": text})
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
