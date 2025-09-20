@@ -8,7 +8,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route("/")
 def home():
-    return "Deaf Individuals Speech-to-Text API is running on Azure!"
+    return "Deaf Individuals Speech-to-Text API is running on Render, my job is done!"
 
 @app.route("/upload", methods=["POST"])
 def upload_wav():
@@ -38,3 +38,4 @@ def upload_wav():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
